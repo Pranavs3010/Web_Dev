@@ -1,3 +1,15 @@
+Build Command - npm run build
+live link - https://magenta-llama-510f4b.netlify.app/
+requirements - 
+# Install project dependencies
+npm install
+
+# Install Tailwind CSS and its peer dependencies
+npm install -D tailwindcss postcss autoprefixer
+
+# Install icons and animation libraries
+npm install lucide-react framer-motion
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
