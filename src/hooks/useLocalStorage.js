@@ -1,0 +1,22 @@
+import { useState, useEffect } from "react";
+
+// A generic hook to keep state in sync with localStorage.
+function getStorageValue(key, defaultValue) {
+  if (typeof window !== "undefined") {
+    const saved = localStorage.getItem(key);
+    return saved ? JSON.parse(saved) : defaultValue;
+  }
+  return defaultValue;
+}
+
+export const useLocalStorage = (key, defaultValue) => {
+  const [value, setValue] = useState(() => {
+    return getStorageValue(key, defaultValue);
+  });
+
+  useEffect(() => {
+    localStorage.setItem(key, JSON.stringify(value));
+  }, [key, value]);
+
+  return [value, setValue];
+};
