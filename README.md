@@ -1,5 +1,7 @@
 Build Command - npm run build
+
 live link - https://magenta-llama-510f4b.netlify.app/
+
 requirements - 
 # Install project dependencies
 npm install
